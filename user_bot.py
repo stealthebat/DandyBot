@@ -11,20 +11,6 @@ def solve(check, x, y):
     return direction[(dx - x_, dy - y_)]
 
 
-# def find_gold(check, x, y, visited, path):
-#     if check("wall", x, y) or (x, y) in visited:
-#         return -1
-#     visited.append((x, y))
-#     if check("gold", x, y):
-#         print("Found gold at:", x, y)
-#         return path
-#     for i, j in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
-#         res = find_gold(check, x + i, y + j, visited, path + [(x, y)])
-#
-#         if res != -1:
-#             return res
-
-
 def find_gold_iter(check, x, y):
     visited = {(x, y)}
     queue = [[(x, y)]]
